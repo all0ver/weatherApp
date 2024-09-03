@@ -10,52 +10,18 @@ export const todayFunc = (data) => {
   const todayWind = data[0].windspeed;
   const todayHumidity = data[0].humidity;
   const todayIcon = data[0].icon;
-  let todayIconImg;
-
-  switch (todayIcon) {
-    case 'rain':
-      todayIconImg = './img/rain.png';
-      break;
-    case 'snow':
-      todayIconImg = './img/snowfall.png';
-      break;
-    case 'fog':
-      todayIconImg = './img/clouds.png';
-      break;
-    case 'wind':
-      todayIconImg = './img/cloudy.png';
-      break;
-    case 'cloudy':
-      todayIconImg = './img/cloudy.png';
-      break;
-    case 'partly-cloudy-day':
-      todayIconImg = './img/cloudy.png';
-      break;
-    case 'partly-cloudy-night':
-      todayIconImg = './img/cloudy.png';
-      break;
-    case 'clear-day':
-      todayIconImg = './img/sunny.png';
-      break;
-    case 'clear-night':
-      todayIconImg = './img/sunny.png';
-      break;
-    default:
-      todayIconImg = '../img/cloudy.png'
-      break;
-  }
 
   const todayDiv = `
           <div class="flex flex-col items-center gap-10">
-            <img src="${todayIconImg}" alt="weather icon" class="w-32">
-            <p class="text-5xl font-bold">${todayTemp}°C</p>
+            <img src="./img/${todayIcon}.svg" alt="weather icon" class="w-32">
+            <p class="text-5xl font-bold">${todayTemp}<span class="metricTemp">°C</span></p>
           </div>
           <div class="flex flex-col gap-4">
             <p class="font-bold text-3xl">${todayDate}</p>
-            <p>Feels like: <span class="font-bold text-xl">${todayFeelLike}°C</span></p>
-            <p>Max temperature: <span class="font-bold text-xl">${todayMax}°C</span></p>
-            <p>Min temperature: <span class="font-bold text-xl">${todayMin}°C</span></p>
-            <p>Wind speed: <span class="font-bold text-xl">${todayWind} m/s</span></p>
+            <p>Feels like: <span class="font-bold text-xl">${todayFeelLike}<span class="metricTemp">°C</span></span></p>
+            <p>Max temperature: <span class="font-bold text-xl">${todayMax}<span class="metricTemp">°C</span></span></p>
+            <p>Min temperature: <span class="font-bold text-xl">${todayMin}<span class="metricTemp">°C</span></span></p>
+            <p>Wind speed: <span class="font-bold text-xl">${todayWind}<span class="metricWind"> m/s</span></span></p>
             <p>Humidity: <span class="font-bold text-xl">${todayHumidity}%</span></p>
           </div>
   `;
@@ -75,52 +41,18 @@ export const tomorrowFunc = (data) => {
   const todayWind = data[1].windspeed;
   const todayHumidity = data[1].humidity;
   const todayIcon = data[1].icon;
-  let todayIconImg;
-
-  switch (todayIcon) {
-    case 'rain':
-      todayIconImg = './img/rain.png';
-      break;
-    case 'snow':
-      todayIconImg = './img/snowfall.png';
-      break;
-    case 'fog':
-      todayIconImg = './img/clouds.png';
-      break;
-    case 'wind':
-      todayIconImg = './img/cloudy.png';
-      break;
-    case 'cloudy':
-      todayIconImg = './img/cloudy.png';
-      break;
-    case 'partly-cloudy-day':
-      todayIconImg = './img/cloudy.png';
-      break;
-    case 'partly-cloudy-night':
-      todayIconImg = './img/cloudy.png';
-      break;
-    case 'clear-day':
-      todayIconImg = './img/sunny.png';
-      break;
-    case 'clear-night':
-      todayIconImg = './img/sunny.png';
-      break;
-    default:
-      todayIconImg = '../img/cloudy.png'
-      break;
-  }
 
   const todayDiv = `
           <div class="flex flex-col items-center gap-10">
-            <img src="${todayIconImg}" alt="weather icon" class="w-32">
-            <p class="text-5xl font-bold">${todayTemp}°C</p>
+            <img src="./img/${todayIcon}.svg" alt="weather icon" class="w-32">
+            <p class="text-5xl font-bold">${todayTemp}<span class="metricTemp">°C</span></p>
           </div>
           <div class="flex flex-col gap-4">
             <p class="font-bold text-3xl">${todayDate}</p>
-            <p>Feels like: <span class="font-bold text-xl">${todayFeelLike}°C</span></p>
-            <p>Max temperature: <span class="font-bold text-xl">${todayMax}°C</span></p>
-            <p>Min temperature: <span class="font-bold text-xl">${todayMin}°C</span></p>
-            <p>Wind speed: <span class="font-bold text-xl">${todayWind} m/s</span></p>
+            <p>Feels like: <span class="font-bold text-xl">${todayFeelLike}<span class="metricTemp">°C</span></span></p>
+            <p>Max temperature: <span class="font-bold text-xl">${todayMax}<span class="metricTemp">°C</span></span></p>
+            <p>Min temperature: <span class="font-bold text-xl">${todayMin}<span class="metricTemp">°C</span></span></p>
+            <p>Wind speed: <span class="font-bold text-xl">${todayWind}<span class="metricWind"> m/s</span></span></p>
             <p>Humidity: <span class="font-bold text-xl">${todayHumidity}%</span></p>
           </div>
   `;
@@ -136,45 +68,11 @@ export const next5Days = (data) => {
     const temp = data[i].temp;
     const todayIcon = data[i].icon;
     const date = data[i].datetime;
-    let todayIconImg;
-
-    switch (todayIcon) {
-      case 'rain':
-        todayIconImg = './img/rain.png';
-        break;
-      case 'snow':
-        todayIconImg = './img/snowfall.png';
-        break;
-      case 'fog':
-        todayIconImg = './img/clouds.png';
-        break;
-      case 'wind':
-        todayIconImg = './img/cloudy.png';
-        break;
-      case 'cloudy':
-        todayIconImg = './img/cloudy.png';
-        break;
-      case 'partly-cloudy-day':
-        todayIconImg = './img/cloudy.png';
-        break;
-      case 'partly-cloudy-night':
-        todayIconImg = './img/cloudy.png';
-        break;
-      case 'clear-day':
-        todayIconImg = './img/sunny.png';
-        break;
-      case 'clear-night':
-        todayIconImg = './img/sunny.png';
-        break;
-      default:
-        todayIconImg = '../img/cloudy.png'
-        break;
-    }
 
     const newDay = `
         <div class="rounded-2xl p-10 bg-[#2a2a2a] flex flex-col gap-4 justify-center items-center flex-1">
-          <img src=${todayIconImg} alt="weather image" class="w-24">
-          <p class="text-3xl">${temp}°C</p>
+          <img src="./img/${todayIcon}.svg" alt="weather image" class="w-24 h-24">
+          <p class="text-3xl font-bold">${temp}<span class="metricTemp">°C</span></p>
           <p class="text-xl font-bold text-nowrap">${date}</p>
         </div>
     `

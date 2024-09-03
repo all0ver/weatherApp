@@ -27,22 +27,24 @@
 
     <div class="w-full max-w-[1200px] flex justify-between mt-10 max-[600px]:flex-col max-[600px]:gap-6 max-[600px]:items-center">
       <div class="flex flex-col gap-4">
-        <h1 class="text-4xl font-bold">Berlin, Germany</h1>
+        <h1 id="location" class="text-4xl font-bold"></h1>
       </div>
       <div class="flex justify-center items-center gap-4 max-[600px]:order-first">
-        <input type="text" name="place" placeholder="Enter location"
+        <input autocomplete="off" type="text" name="place" placeholder="Enter location"
           class="text-xl h-8 w-80 bg-[#2A2A2A] p-6 rounded-xl max-[400px]:w-full">
-        <img src="./img/search.svg" alt="Search" class="w-6 h-6 cursor-pointer">
+        <img id="search" src="./img/search.svg" alt="Search" class="w-6 h-6 cursor-pointer">
       </div>
     </div>
-    <div class="w-full max-w-[1200px] flex justify-between items-center my-4 max-[600px]:justify-center max-[600px]:gap-16">
+    <div class="w-full max-w-[1200px] flex justify-between items-center my-4 max-[600px]:justify-center max-[600px]:gap-16 rounded-l-xl">
       <p id="time" class="text-xl font-medium">12:36</p>
       <div id="tempChange" class="flex cursor-pointer">
-        <div class="py-2 px-3 bg-[#4d4d4d] flex justify-center items-center rounded-l-xl">
-          °C
+        <div class="bg-[#4d4d4d] flex justify-center items-center rounded-l-xl" id="CDiv">
+          <label for="C" class="py-2 px-3 rounded-l-xl cursor-pointer">°C</label>
+          <input id="C" type="radio" name="temp" value="C" class="appearance-none">
         </div>
-        <div class="py-2 px-3 bg-[#2A2A2A] flex justify-center items-center rounded-r-xl">
-          °F
+        <div class="bg-[#2b2b2b] flex justify-center items-center rounded-r-xl" id="FDiv">
+          <label for="F" class="py-2 px-3 rounded-r-xl cursor-pointer">°F</label>
+          <input id="F" type="radio" name="temp" value="F" class="appearance-none">
         </div>
       </div>
     </div>
