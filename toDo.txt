@@ -2,9 +2,9 @@
 https://github.com/visualcrossing/WeatherIcons
 https://www.visualcrossing.com/resources/documentation/weather-api/defining-icon-set-in-the-weather-api/
 
-2. reponsive design
-
-3. place input validation
+2. place input validation
 https://www.theodinproject.com/lessons/node-path-javascript-form-validation-with-javascript
 
+3. search bar actually working
 
+4. celsius / farenheit button actually working

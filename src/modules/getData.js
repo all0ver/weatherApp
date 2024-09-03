@@ -1,6 +1,6 @@
 export const getDataC = async (place) => {
   try {
-    const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/berlin?unitGroup=metric&key=QVBFF9FL5NCAYA4B5AZND94Q3&contentType=json&iconSet=icons1`);
+    const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${place}?unitGroup=metric&key=QVBFF9FL5NCAYA4B5AZND94Q3&contentType=json&iconSet=icons1`);
     const data = await response.json();
     return data;
   } catch(error) {
