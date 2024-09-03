@@ -580,6 +580,14 @@ video {
   height: 2rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
+.h-24 {
+  height: 6rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -608,8 +616,12 @@ video {
   width: 100vw;
 }
 
-.w-40 {
-  width: 10rem;
+.w-4 {
+  width: 1rem;
+}
+
+.w-10 {
+  width: 2.5rem;
 }
 
 .max-w-\[1200px\] {
@@ -620,12 +632,14 @@ video {
   flex: 1 1 0%;
 }
 
-.basis-1\/4 {
-  flex-basis: 25%;
-}
-
 .cursor-pointer {
   cursor: pointer;
+}
+
+.appearance-none {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .flex-col {
@@ -654,14 +668,6 @@ video {
 
 .gap-4 {
   gap: 1rem;
-}
-
-.gap-8 {
-  gap: 2rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
 }
 
 .text-nowrap {
@@ -706,12 +712,18 @@ video {
   background-color: rgb(77 77 77 / var(--tw-bg-opacity));
 }
 
-.p-10 {
-  padding: 2.5rem;
+.bg-blue-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 197 253 / var(--tw-bg-opacity));
 }
 
-.p-16 {
-  padding: 4rem;
+.bg-\[\#2b2b2b\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(43 43 43 / var(--tw-bg-opacity));
+}
+
+.p-10 {
+  padding: 2.5rem;
 }
 
 .p-6 {
@@ -791,12 +803,6 @@ video {
   }
 }
 
-@media (max-width: 1100px) {
-  .max-\[1100px\]\:basis-1\/4 {
-    flex-basis: 25%;
-  }
-}
-
 @media (max-width: 600px) {
   .max-\[600px\]\:order-first {
     order: -9999;
@@ -814,34 +820,12 @@ video {
     justify-content: center;
   }
 
-  .max-\[600px\]\:gap-4 {
-    gap: 1rem;
-  }
-
-  .max-\[600px\]\:gap-8 {
-    gap: 2rem;
+  .max-\[600px\]\:gap-16 {
+    gap: 4rem;
   }
 
   .max-\[600px\]\:gap-6 {
     gap: 1.5rem;
-  }
-
-  .max-\[600px\]\:gap-16 {
-    gap: 4rem;
-  }
-}
-
-@media (max-width: 550px) {
-  .max-\[550px\]\:flex-col {
-    flex-direction: column;
-  }
-
-  .max-\[550px\]\:gap-4 {
-    gap: 1rem;
-  }
-
-  .max-\[550px\]\:gap-8 {
-    gap: 2rem;
   }
 }
 
@@ -851,26 +835,12 @@ video {
   }
 }
 
-@media (min-width: 1100px) {
-  .min-\[1100px\]\:basis-1\/5 {
-    flex-basis: 20%;
-  }
-}
-
 @media (min-width: 1200px) {
-  .min-\[1200px\]\:basis-\[40\%\] {
-    flex-basis: 40%;
-  }
-
-  .min-\[1200px\]\:basis-\[60\%\] {
-    flex-basis: 60%;
+  .min-\[1200px\]\:basis-\[45\%\] {
+    flex-basis: 45%;
   }
 
   .min-\[1200px\]\:basis-\[55\%\] {
     flex-basis: 55%;
-  }
-
-  .min-\[1200px\]\:basis-\[45\%\] {
-    flex-basis: 45%;
   }
 }

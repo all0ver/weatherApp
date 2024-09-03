@@ -1,6 +1,6 @@
 export const getDataC = async (place) => {
   try {
-    const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${place}?unitGroup=metric&key=QVBFF9FL5NCAYA4B5AZND94Q3&contentType=json&iconSet=icons1`);
+    const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${place}?unitGroup=metric&key=QVBFF9FL5NCAYA4B5AZND94Q3&contentType=json&iconSet=icons2`);
     const data = await response.json();
     return data;
   } catch(error) {
@@ -10,7 +10,7 @@ export const getDataC = async (place) => {
 
 export const getDataF = async (place) => {
   try {
-    const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${place}?unitGroup=us&key=QVBFF9FL5NCAYA4B5AZND94Q3&contentType=json`);
+    const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${place}?unitGroup=us&key=QVBFF9FL5NCAYA4B5AZND94Q3&contentType=json&iconSet=icons2`);
     const data = await response.json();
     return data;
   } catch(error) {
