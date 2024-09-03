@@ -1,0 +1,5 @@
+1. change images to svg from visual crossing: https://github.com/visualcrossing/WeatherIcons
+https://www.visualcrossing.com/resources/documentation/weather-api/defining-icon-set-in-the-weather-api/
+
+2. reponsive design
+
