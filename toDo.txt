@@ -1,5 +1,10 @@
-1. change images to svg from visual crossing: https://github.com/visualcrossing/WeatherIcons
+1. change images to svg from visual crossing: 
+https://github.com/visualcrossing/WeatherIcons
 https://www.visualcrossing.com/resources/documentation/weather-api/defining-icon-set-in-the-weather-api/
 
 2. reponsive design
+
+3. place input validation
+https://www.theodinproject.com/lessons/node-path-javascript-form-validation-with-javascript
+
 
