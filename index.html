@@ -15,21 +15,103 @@
       font-style: normal;
       color: white;
     }
+
+    img {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(226deg) brightness(104%) contrast(107%);
+    }
   </style>
 </head>
 
 <body class="flex items-center flex-col min-h-screen bg-[#18181B] w-screen">
-  <div class="w-[1200px] flex justify-between mt-10">
-    <div class="flex flex-col gap-4">
-      <h1 class="text-4xl font-bold">Berlin, Germany</h1>
-      <p id="time" class="text-xl font-medium">12:36</p>
+  <div class="w-full max-w-[1200px] flex-1 flex flex-col px-8">
+
+    <div class="w-full max-w-[1200px] flex justify-between mt-10">
+      <div class="flex flex-col gap-4">
+        <h1 class="text-4xl font-bold">Berlin, Germany</h1>
+      </div>
+      <div class="flex justify-center items-center gap-4">
+        <input type="text" name="place" placeholder="Enter location"
+          class="text-xl h-8 w-80 bg-[#2A2A2A] p-6 rounded-xl">
+        <img src="./img/search.svg" alt="Search" class="w-6 h-6 cursor-pointer">
+      </div>
     </div>
-    <div class="flex justify-center items-center gap-4">
-     <input type="text" name="place" placeholder="Enter location" class="text-xl h-8 w-80 bg-[#2A2A2A] p-6 rounded-xl"> 
-     <img src="#" alt="Search">
+    <div class="w-full max-w-[1200px] flex justify-between items-center my-4">
+      <p id="time" class="text-xl font-medium">12:36</p>
+      <div id="tempChange" class="flex cursor-pointer">
+        <div class="py-2 px-3 bg-[#4d4d4d] flex justify-center items-center rounded-l-xl">
+          °C
+        </div>
+        <div class="py-2 px-3 bg-[#2A2A2A] flex justify-center items-center rounded-r-xl">
+          °F
+        </div>
+      </div>
+    </div>
+    <div id="weather" class="flex-1">
+      <div class="flex items-center justify-between max-[1199px]:flex-col gap-10">
+        <div id="today" class="flex items-center justify-between min-[1200px]:basis-[60%] w-full bg-[#2a2a2a] p-16 rounded-2xl">
+          <div class="flex flex-col items-center gap-10">
+            <img src="./img/sunny.png" alt="weather icon" class="w-32">
+            <p class="text-5xl font-bold">28°C</p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <p class="font-bold text-3xl">20-12-2024</p>
+            <p>Feels like: <span class="font-bold text-xl">17°C</span></p>
+            <p>Max temperature: <span class="font-bold text-xl">26°C</span></p>
+            <p>Min temperature: <span class="font-bold text-xl">10°C</span></p>
+            <p>Wind speed: <span class="font-bold text-xl">15 m/s</span></p>
+            <p>Humidity: <span class="font-bold text-xl">20%</span></p>
+          </div>
+        </div>
+        <div id="tomorrow" class="flex items-center justify-between min-[1200px]:basis-[40%] w-full bg-[#2a2a2a] p-16 rounded-2xl">
+          <div class="flex flex-col items-center gap-10">
+            <img src="./img/sunny.png" alt="weather icon" class="w-32">
+            <p class="text-5xl font-bold">28°C</p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <p class="font-bold text-3xl">21-12-2024</p>
+            <p>Feels like: <span class="font-bold text-xl">17°C</span></p>
+            <p>Max temperature: <span class="font-bold text-xl">26°C</span></p>
+            <p>Min temperature: <span class="font-bold text-xl">10°C</span></p>
+            <p>Wind speed: <span class="font-bold text-xl">15 m/s</span></p>
+            <p>Humidity: <span class="font-bold text-xl">20%</span></p>
+          </div>
+        </div>
+
+      </div>
+      <div id="nextDays" class="flex gap-4 my-10">
+
+        <div class="rounded-2xl p-10 bg-[#2a2a2a] min-[1000px]:basis-1/5 flex flex-col gap-4 justify-center items-center">
+          <img src="./img/rainy.png" alt="weather image" class="w-24">
+          <p class="text-3xl">28°C</p>
+          <p class="text-xl font-bold">22-12-2024</p>
+        </div>
+        
+        <div class="rounded-2xl p-10 bg-[#2a2a2a] min-[1000px]:basis-1/5 flex flex-col gap-4 justify-center items-center">
+          <img src="./img/rainy.png" alt="weather image" class="w-24">
+          <p class="text-3xl">28°C</p>
+          <p class="text-xl font-bold">22-12-2024</p>
+        </div>
+
+        <div class="rounded-2xl p-10 bg-[#2a2a2a] min-[1000px]:basis-1/5 flex flex-col gap-4 justify-center items-center">
+          <img src="./img/rainy.png" alt="weather image" class="w-24">
+          <p class="text-3xl">28°C</p>
+          <p class="text-xl font-bold">22-12-2024</p>
+        </div>
+
+        <div class="rounded-2xl p-10 bg-[#2a2a2a] min-[1000px]:basis-1/5 flex flex-col gap-4 justify-center items-center">
+          <img src="./img/rainy.png" alt="weather image" class="w-24">
+          <p class="text-3xl">28°C</p>
+          <p class="text-xl font-bold">22-12-2024</p>
+        </div>
+
+        <div class="rounded-2xl p-10 bg-[#2a2a2a] min-[1000px]:basis-1/5 flex flex-col gap-4 justify-center items-center">
+          <img src="./img/rainy.png" alt="weather image" class="w-24">
+          <p class="text-3xl">28°C</p>
+          <p class="text-xl font-bold">22-12-2024</p>
+        </div>
+      </div>
     </div>
   </div>
-
 </body>
 
 </html>
