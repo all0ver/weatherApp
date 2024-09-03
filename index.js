@@ -6,10 +6,11 @@ import { next5Days } from "./modules/DOM.js";
 
 
 const main = async () => {
-  const test = await getDataC("berlin");
-  todayFunc(test.days);
-  tomorrowFunc(test.days);
-  next5Days(test.days);
+  const place = await getDataC("tokyo");
+  todayFunc(place.days);
+  tomorrowFunc(place.days);
+  next5Days(place.days);
+  console.log(place)
 }
 
 

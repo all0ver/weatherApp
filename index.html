@@ -25,17 +25,17 @@
 <body class="flex items-center flex-col min-h-screen bg-[#18181B] w-screen">
   <div class="w-full max-w-[1200px] flex-1 flex flex-col px-8">
 
-    <div class="w-full max-w-[1200px] flex justify-between mt-10">
+    <div class="w-full max-w-[1200px] flex justify-between mt-10 max-[600px]:flex-col max-[600px]:gap-6 max-[600px]:items-center">
       <div class="flex flex-col gap-4">
         <h1 class="text-4xl font-bold">Berlin, Germany</h1>
       </div>
-      <div class="flex justify-center items-center gap-4">
+      <div class="flex justify-center items-center gap-4 max-[600px]:order-first">
         <input type="text" name="place" placeholder="Enter location"
-          class="text-xl h-8 w-80 bg-[#2A2A2A] p-6 rounded-xl">
+          class="text-xl h-8 w-80 bg-[#2A2A2A] p-6 rounded-xl max-[400px]:w-full">
         <img src="./img/search.svg" alt="Search" class="w-6 h-6 cursor-pointer">
       </div>
     </div>
-    <div class="w-full max-w-[1200px] flex justify-between items-center my-4">
+    <div class="w-full max-w-[1200px] flex justify-between items-center my-4 max-[600px]:justify-center max-[600px]:gap-16">
       <p id="time" class="text-xl font-medium">12:36</p>
       <div id="tempChange" class="flex cursor-pointer">
         <div class="py-2 px-3 bg-[#4d4d4d] flex justify-center items-center rounded-l-xl">
