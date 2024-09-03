@@ -33,6 +33,14 @@ search.addEventListener("click", () => {
   main(searchInput.value);
 });
 
+searchInput.addEventListener("keydown", (event) => {
+  if (event.key === 'Enter') {
+    event.preventDefault;
+    main(searchInput.value);
+    searchInput.value = '';
+  }
+})
+
 const F = document.querySelector("#FDiv");
 const C = document.querySelector("#CDiv");
 
@@ -73,6 +81,5 @@ C.addEventListener("click", async () => {
   F.classList.add('bg-[#2b2b2b]');
   F.classList.remove('bg-[#4d4d4d]');
 });
-
 
 main('berlin');
